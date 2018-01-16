@@ -13,6 +13,26 @@
 
 #include "Sorts.h"
 
+void testSort(){
+    //test merge sort:
+    int size = 16;
+    int testing[] = {5,6,2,1,11,0,14,9,10,13,7,4,8,12,3,-1};
+    
+    cout << "Before sort:" << endl;
+    for(int i=0; i<size; i++){//print the testing array
+        cout << testing[i] << " ";
+    }
+    cout << endl << endl;
+    
+    mergeSort(testing,size);
+    
+    cout << "After sort:" << endl;
+    for(int i=0; i<size; i++){//print the testing array
+        cout << testing[i] << " ";
+    }
+    cout << endl << endl;
+}
+
 //=============================================================================
 //Merge Sort Functions::
 //[START]

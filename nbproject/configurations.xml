@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>Searches.h</itemPath>
       <itemPath>Sorts.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -13,6 +14,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Searches.cpp</itemPath>
       <itemPath>Sorts.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -38,6 +40,10 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="Searches.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Searches.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Sorts.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Sorts.h" ex="false" tool="3" flavor2="0">
@@ -65,6 +71,10 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="Searches.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Searches.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Sorts.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Sorts.h" ex="false" tool="3" flavor2="0">

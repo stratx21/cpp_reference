@@ -11,8 +11,18 @@
  * Created on January 16, 2018, 5:06 PM
  */
 
+
+
 #ifndef SORTS_H
 #define SORTS_H
+
+#include <iostream>//needed for testing only
+using namespace std;//needed for testing only
+
+/**
+ * To test the sorting algorithms.
+ */
+void testSort();
 
 //MERGE::                                       O(n*lg(n))   <- lg = log base 2
 //=============================================================================
