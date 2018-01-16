@@ -16,6 +16,7 @@
 void testSort(){
     //test merge sort:
     int size = 16;
+    //The end result should be -1 to 14 in order V
     int testing[] = {5,6,2,1,11,0,14,9,10,13,7,4,8,12,3,-1};
     
     cout << "Before sort:" << endl;
@@ -31,6 +32,7 @@ void testSort(){
         cout << testing[i] << " ";
     }
     cout << endl << endl;
+    
 }
 
 //=============================================================================
