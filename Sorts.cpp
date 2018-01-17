@@ -84,6 +84,7 @@ void merge(int array[], int start, int middle, int end){
     }
     
     delete [] sorted;
+    sorted = nullptr;
 }
 
 //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
