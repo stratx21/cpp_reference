@@ -110,10 +110,14 @@ void bubbleSort(int array[], int size){
 void selectionSort(int array[], int size){
     //SELECTION::                                   O(n log n) 
     for(int pass = 0; pass < size-1; pass++){
+        int hold = pass;
         for(int scan = pass + 1; scan < size; scan++){
-            if(array[scan] > array[scan+1]){
-                swap(array[scan], array[scan+1]);
+            if(array[scan] > array[hold]){
+                hold = scan;
             }
+        }
+        if(pass != hold){
+            swap(array[pass],array[hold]);
         }
     }
 }
