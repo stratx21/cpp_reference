@@ -11,6 +11,12 @@ public:
     int low, high, sum;
     Data(int l, int h, int s);
 };
+
+/**
+ * This function performs basic tests of the functions.
+ */
+void testMaxSubarray();
+
 /**
  * This function finds the max subarray that crosses over the point mid and
  *      can reach as low as low and as high as high to find the maximum
