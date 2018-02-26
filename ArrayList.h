@@ -19,23 +19,78 @@ using namespace std;
 template <class T>
 class ArrayList{
 private:
+    /**
+     * The initial capacity of the ArrayList.
+     */
     constexpr static int CAPACITY_INITIAL = 3;
+    
+    /**
+     * The increment to use for each increment of the ArrayList.
+     */
     constexpr static int CAPACITY_INCREMENT = 3;
     
+    /**
+     * The number of spots used in the ArrayList. 
+     */
     int used;
+    
+    /**
+     * The capacity that the array holds. 
+     */
     int capacity;
+    
+    /**
+     * The manual array that is being managed. 
+     */
     T* array;
     
+    /**
+     * Resize the array in order to add more or to have capacity. 
+     */
     void resize();
+    
+    /**
+     * Resize the array with a size specification. 
+     * 
+     * @param newSize the size specification. 
+     * @return a boolean value concerning if the resize worked. 
+     */
     bool resize(int newSize);
 public:
+    /**
+     * The default constructor for the ArrayList to build the array. 
+     */
     ArrayList();
+    
+    /**
+     * The destructor for the ArrayList to take down the array. 
+     */
     ~ArrayList();
     
+    /**
+     * The copy constructor to manage the copying of an ArrayList. 
+     * 
+     * @param that the ArrayList instance by reference and constant to
+     *      be copied. 
+     */
     ArrayList(const ArrayList& that);
     
+    /**
+     * The operator overload used to override the = operator in order to 
+     *      set the data of that to this. 
+     * 
+     * @param that the instance to set the data of for this instance
+     * @return this class by reference for chaining and other purposes
+     */
     ArrayList<T>& operator=(const ArrayList& that);
     
+    /**
+     * The operator overload in order to access a part of the ArrayList by
+     *      using the [] operator. 
+     * 
+     * @param index the index to find
+     * @return the object of type T that is found at the spot index 
+     */
     T& operator[](int index);
     
     /**
@@ -71,18 +126,106 @@ public:
      */
     bool set(int index,T toSet);
     
-    
+    /**
+     * This function removes the object of type T at the spot index. 
+     * 
+     * @param index the index to remove the object from
+     * @return a copy of the object that was removed 
+     */
     T remove(int index);
+    
+    /**
+     * This function removes a range of objects of type T from the array 
+     *      inclusively. 
+     * 
+     * @param start the start point to remove from 
+     * @param end the end point to remove from, inclusively
+     * @return an ArrayList object of the objects that were removed from this
+     *      instance of ArrayList of type T
+     */
     ArrayList<T> removeRange(int start,int end);
+    
+    /**
+     * This function removes one copy of the T toRemove.
+     * 
+     * @param toRemove the instance of T to remove 
+     * @return if the remove was followed through and removed an object 
+     */
     bool removeOne(T toRemove);
+    
+    /**
+     * This function removes all copies found of the T toRemove.
+     * 
+     * @param toRemove the T to remove all copies of
+     * @return if a copy of toRemove was removed 
+     */
     bool removeAllOf(T toRemove);
+    
+    /**
+     * This funciton replaces only one of the toReplace T objects with the
+     *      replacement T object. 
+     * 
+     * @param toReplace the T object to replace 
+     * @param replacement the T object to replace toReplace with
+     * @return if a copy of toReplace was replaced 
+     */
     bool replaceOne(T toReplace,T replacement);
+    
+    /**
+     * This function replaces all of the copies of toReplace with replacement.
+     * 
+     * @param toReplace the copy of T to replace whenever found 
+     * @param replacement the replacement to replace toReplace with
+     * @return a boolean value concerning if a copy of toReplace was found
+     *      and then replaced, at least one will turn it to true 
+     */
     bool replaceAllOf(T toReplace,T replacement);
+    
+    /**
+     * This function returns a sub-ArrayList that contains all of the T
+     *      objects from start to end, inclusively. 
+     * 
+     * @param start the start of the index of the new sub-ArrayList 
+     * @param end the end of the index of the new sub-ArrayList 
+     * @return the sub-ArrayList from start to end, inclusively 
+     */
     ArrayList<T> getSubArrayList(int start,int end);
+    
+    /**
+     * This function removes all objects from the ArrayList. 
+     */
     void clear();
+    
+    /**
+     * This function returns the size of the ArrayList, in how many objects
+     *      are held in this ArrayList. 
+     * @return the number of objects that are held in this ArrayList
+     */
     int size();
+    
+    /**
+     * This function adds to the capacity of the ArrayList. 
+     * 
+     * PRECONDITION:: toAdd does not put the size of the ArrayList out of 
+     *      bounds of the integer bounds.
+     * @param toAdd the number of spots to add 
+     */
     void addCapacity(unsigned int toAdd);
+    
+    /**
+     * This function finds the index of the T object toFind and returns
+     *      the index. 
+     * @param toFind the object instance of T to find 
+     * @return the index of the object instance of T that was found 
+     */
     int indexOf(T toFind);
+    
+    /**
+     * This function trims the size of the array, whether there are objects
+     *      in the way or not, to the new size of newSize. 
+     * 
+     * @param newSize the new size to trim to 
+     */
     void trim(int newSize);
 };
 
