@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/ArrayList.o \
 	${OBJECTDIR}/Searches.o \
 	${OBJECTDIR}/Sorts.o \
 	${OBJECTDIR}/main.o
@@ -63,6 +64,11 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/reference.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/reference ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/ArrayList.o: ArrayList.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ArrayList.o ArrayList.cpp
 
 ${OBJECTDIR}/Searches.o: Searches.cpp
 	${MKDIR} -p ${OBJECTDIR}
